@@ -2,7 +2,7 @@ const express = require('express');
 var mysql = require('mysql');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 3000;
+const port = 3306;
 
 app.use("/css", express.static("css"));
 //app.use(' /css', express.static(__dirname + '/css'));
@@ -20,15 +20,15 @@ app.get('/', function(req, res) {
 
 //database connection
 var connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'test'
-        //remote database connection
-        //host: 'remotemysql.com',
-        // user: ' hvn3DbB63t',
-        //password: 'Qo9Brt2jYH',
-        // database: 'hvn3DbB63t'
+    // host: 'localhost',
+    // user: 'root',
+    // password: '',
+    // database: 'test'
+    //remote database connection
+    host: 'remotemysql.com',
+    user: ' hvn3DbB63t',
+    password: 'Qo9Brt2jYH',
+    database: 'hvn3DbB63t'
 })
 
 connection.connect(function(err) {
