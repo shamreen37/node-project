@@ -2,7 +2,7 @@ const express = require('express');
 var mysql = require('mysql');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 3306;
+const port = process.env.PORT || 3000;
 
 app.use("/css", express.static("css"));
 //app.use(' /css', express.static(__dirname + '/css'));
@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 var connection = mysql.createConnection({
     // host: 'localhost',
     // user: 'root',
-    // password: '',
+    //  password: '',
     // database: 'test'
     //remote database connection
     host: 'remotemysql.com',
