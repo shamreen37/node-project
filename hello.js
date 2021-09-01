@@ -44,10 +44,10 @@ app.post('/submit', function(req, res) {
     connection.query(sql, function(err) {
         if (err) throw err
         res.render('index', {
-            title: 'Data Saved',
-            message: 'Data Saved Success'
-        })
-        connection.end();
+                title: 'Data Saved',
+                message: 'Data Saved Success'
+            })
+            //  connection.end();
     })
 
 
