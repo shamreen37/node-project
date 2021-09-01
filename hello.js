@@ -26,7 +26,7 @@ var connection = mysql.createConnection({
     // database: 'test'
     //remote database connection
     host: 'remotemysql.com',
-    user: ' hvn3DbB63t',
+    user: 'hvn3DbB63t',
     password: 'Qo9Brt2jYH',
     database: 'hvn3DbB63t'
 })
